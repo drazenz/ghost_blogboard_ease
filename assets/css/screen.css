@@ -16,3 +16,10 @@
 @import "blog/comment.css";
 @import "misc/utilities.css";
 @import "misc/owl.css";
+@import "layout.css";
+@import "blog/blogboard_popup.css";
+
+body {
+	font-family: 'Avenir', 'Helvetica', sans-serif;
+}
+

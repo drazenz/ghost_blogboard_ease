@@ -76,7 +76,6 @@
 
 .post-author-name {
     margin-bottom: 6px;
-    font-weight: 600;
 }
 
 .post-author-name-link + .post-author-name-link::before {
@@ -117,4 +116,90 @@
     background-color: var(--white-color);
     border: 1px solid var(--mid-gray-color);
     border-radius: 15px;
+}
+
+/* 6.1. Post Byline
+/* ---------------------------------------------------------- */
+
+.article-byline {
+    display: flex;
+    justify-content: space-between;
+    margin: min(24px, 5.6vmin) 0 0;
+}
+
+.article-byline-content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.article-byline-content .author-list {
+    justify-content: flex-start;
+    padding: 0 14px 0 0;
+}
+
+.article-byline-meta {
+    color: var(--color-secondary-text);
+    font-size: 1.4rem;
+    line-height: 1.2em;
+}
+
+.article-byline-meta .author-name {
+    margin: 0 0 6px;
+    font-size: 1.6rem;
+    letter-spacing: 0;
+}
+
+.article-byline-meta .bull {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.author-avatar {
+    display: block;
+    overflow: hidden;
+    margin: 0 -4px;
+    width: min(56px, 13.6vmin);
+    height: min(56px, 13.6vmin);
+    border: #fff 2px solid;
+    border-radius: 50%;
+    background-color: var(--color-border);
+}
+
+.page-template .article-title {
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .article-byline-content .author-list {
+        padding-right: 12px;
+    }
+    .article-byline-meta .author-name {
+        margin-bottom: 4px;
+    }
+}
+
+.author-profile-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: color-mod(var(--color-lightgrey) l(+10%));
+    border-radius: 100%;
+
+    object-fit: cover;
+}
+
+.author-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0 4px;
+    padding: 0;
+    list-style: none;
+}
+
+.author-list-item {
+    position: relative;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
 }

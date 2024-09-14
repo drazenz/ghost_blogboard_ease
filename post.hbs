@@ -5,20 +5,39 @@
     {{#post}}
 
     <article class="{{post_class}}">
-
         <header class="gh-article-header gh-canvas">
             <h1 class="gh-article-title">{{title}}</h1>
-            <div class="post-meta">
-                Last updated on&nbsp;
-                <time datetime="{{date format="YYYY-MM-DD"}}">{{date updated_at}}</time>
-            </div>
+						<div class="article-byline">
+							<section class="article-byline-content">
+									<ul class="author-list instapaper_ignore">
+											{{#foreach authors}}
+											<li class="author-list-item">
+													<a href="{{url}}" class="author-avatar" aria-label="Read more of {{name}}">
+															<img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
+													</a>
+											</li>
+											{{/foreach}}
+									</ul>
+
+									<div class="article-byline-meta">
+											<div class="author-name">{{authors}}</div>
+											<div class="byline-meta-content">
+													<time class="byline-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+													{{#if reading_time}}
+															<span class="byline-reading-time"><span class="bull">&bull;</span> {{reading_time}}</span>
+													{{/if}}
+											</div>
+									</div>
+
+							</section>
+						</div>
             {{> "post-image"}}
+
         </header>
 
-        <div class="gh-content gh-canvas">
-            {{content}}
-        </div>
-
+			<div class="gh-content gh-canvas">
+					{{content}}
+			</div>
         <div class="pagination-container gh-canvas">
         <nav class="pagination">
 
@@ -50,7 +69,6 @@
         {{/if}}
 
     </article>
-
     {{/post}}
-
+		{{> "blogboard_popup"}}
 </main>

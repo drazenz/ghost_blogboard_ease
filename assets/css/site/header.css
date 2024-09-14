@@ -11,3 +11,22 @@
 .gh-head-menu::after {
     display: none;
 }
+
+li.nav-try-blogboard {
+	margin-left: 12px!important;
+}
+
+li.nav-try-blogboard a {
+	font-weight: bold;
+	text-transform: none;
+	background-color:  #fd3a5c;
+	opacity: 1;
+	border-radius: 5px;
+	color: white;
+	padding: 10px 20px;
+}
+
+li.nav-try-blogboard a:hover {
+	text-decoration: none;
+}
+
