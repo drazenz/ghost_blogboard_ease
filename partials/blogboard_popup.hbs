@@ -1,0 +1,52 @@
+<div id="my-popup">
+	<div class="sidebar-popup">
+			<button id="close-popup" class="close-button">&#x2715;</button>
+			<div class="popup-content">
+				<div style="display: flex; flex-flow: row; height: 100%;">
+					<div style="flex-grow: 3;">
+						<div style="display: flex; flex-flow: column; justify-content: center; height: 100%;">
+							<p>
+								<b>
+								Hey	👋 You like engineering blogs, right?
+								</b>
+							</p>
+							<p>
+								We built Blogboard to help you search, discover and follow the best blogs.
+							</p>
+							<p>
+								Search by topics, companies, or technologies.
+							</p>
+							<p>
+								Or sign up for a weekly newsletter with your personalized recommendations.
+							</p>
+							<p style="text-align: left; width: 100%;">
+								<a href="https://blogboard.io?utm_source=blogboard-journal&utm_medium=sidebar-right&utm_campaign=blogboard-01&utm_id=blogboard-journal-01" target="_blank" class="sidebar-link">
+									<b>Try Blogboard now →</b>
+								</a>
+							</p>
+						</div>
+					</div>
+					<div style="
+						"
+						class="popup-image"
+						>
+					</div>
+				</div>
+			</div>
+	</div>
+</div>	
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+	// Fade out popup when close button is clicked
+	$('#close-popup').click(function() {
+		$('#my-popup').slideUp();
+	});
+
+	// Show the popup when the page loads, after a few seconds, with slide-in effect
+	$(document).ready(function() {
+		setTimeout(function() {
+			$('#my-popup').slideDown();
+		}, 3000);
+	});
+</script>

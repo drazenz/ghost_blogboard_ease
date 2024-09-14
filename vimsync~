@@ -1,0 +1,6 @@
+# Copy to server
+# rsync -rP $(git rev-parse --show-toplevel)/theme/* root@ghost-vm:/var/www/ghost/content/themes/casper --exclude .git --exclude node_modules --delete --rsync-path "sudo -iu ghost-mgr rsync"
+
+# Copy to local file
+rsync -rP $(git rev-parse --show-toplevel)/* ~/src/ghost/content/themes/ease --exclude .git --exclude node_modules --delete
+
